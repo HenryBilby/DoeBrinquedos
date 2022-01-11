@@ -19,7 +19,15 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        if let user = Auth.auth().currentUser {
+//            let listaBrinquedosController = ListaBrinquedosViewController()
+            guard let listaBrinquedosController = storyboard?.instantiateViewController(withIdentifier: "ListaBrinquedosViewController") else {return}
+//            if let name = user.displayName{
+//                listaBrinquedosController.name = name
+//                print(listaBrinquedosController.name)
+//            }
+            navigationController?.pushViewController(listaBrinquedosController, animated: false)
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
