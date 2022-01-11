@@ -11,7 +11,6 @@ import Firebase
 class ListaBrinquedosViewController: UIViewController {
     
     @IBOutlet weak var labelUserName: UILabel!
-    @IBOutlet weak var buttonAdd: UIBarButtonItem!
     @IBOutlet weak var tableViewBrinquedos: UITableView!
     
     let collection = "toy"
@@ -39,8 +38,20 @@ class ListaBrinquedosViewController: UIViewController {
         tableViewBrinquedos.delegate = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let controller = segue.destination as? CadastraEditaViewController,
+           let toy = sender as? Toy {
+            controller.toy = toy
+        }
+    }
+    
+    @IBAction func addAction(_ sender: Any) {
+//        showAlertForToy()
+        performSegue(withIdentifier: "gotoEdit", sender: nil)
+    }
+    
     private func loadToyList() {
-        listener = firestore.collection(collection).order(by: "name", descending: true).addSnapshotListener(includeMetadataChanges: true, listener: { snapshot, error in
+        listener = firestore.collection(collection).order(by: "name", descending: false).addSnapshotListener(includeMetadataChanges: true, listener: { snapshot, error in
             if let error = error {
                 print(error)
             } else {
@@ -72,6 +83,72 @@ class ListaBrinquedosViewController: UIViewController {
         tableViewBrinquedos.reloadData()
     }
     
+    private func showAlertForToy(_ toy: Toy? = nil){
+        let alert = UIAlertController(title: "Brinquedo", message: "Informe as informações do brinquedo", preferredStyle: .alert)
+        
+        alert.addTextField { textField in
+            textField.placeholder = "Nome"
+            textField.text = toy?.name
+        }
+        
+        alert.addTextField { textField in
+            textField.keyboardType = .numberPad
+            textField.placeholder = "Estado: 0-Novo, 1-Usado, 2-Precisa de Reparo"
+            textField.text = toy?.state.description
+        }
+        
+        alert.addTextField { textField in
+            textField.placeholder = "Doador:"
+            textField.text = toy?.donor
+        }
+        
+        alert.addTextField { textField in
+            textField.placeholder = "Endereço:"
+            textField.text = toy?.address
+        }
+        
+        alert.addTextField { textField in
+            textField.keyboardType = .phonePad
+            textField.placeholder = "Telefone: "
+            textField.text = toy?.phone
+        }
+        
+        let save = UIAlertAction(title: "Salvar", style: .default){ _ in
+            guard let name = alert.textFields?[0].text else {return}
+            
+            guard let stateString = alert.textFields?[1].text,
+                  let state = Int(stateString) else {return}
+            
+            guard let donor = alert.textFields?[2].text else {return}
+            
+            guard let address = alert.textFields?[3].text else {return}
+            
+            guard let phone = alert.textFields?[4].text else {return}
+            
+            let data : [String: Any] = [
+                "name": name,
+                "state": state,
+                "donor": donor,
+                "address": address,
+                "phone": phone
+            ]
+            
+            if let toy = toy {
+                //edicao
+                self.firestore.collection(self.collection).document(toy.id).updateData(data)
+            } else {
+                //criacao
+                self.firestore.collection(self.collection).addDocument(data: data)
+            }
+        }
+        
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        alert.addAction(save)
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
     private func setLabelUserName(){
         if let name = name {
             print(name)
@@ -85,10 +162,8 @@ class ListaBrinquedosViewController: UIViewController {
             return "Novo"
         case 1:
             return "Usado"
-        case 2:
-            return "Precisa de Reparo"
         default:
-            return ""
+            return "Precisa de Reparo"
         }
     }
 }
@@ -113,6 +188,7 @@ extension ListaBrinquedosViewController : UITableViewDataSource {
 
 extension ListaBrinquedosViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Indice selecionado \(indexPath)")
+//        showAlertForToy(toys[indexPath.row])
+        performSegue(withIdentifier: "gotoEdit", sender: toys[indexPath.row])
     }
 }

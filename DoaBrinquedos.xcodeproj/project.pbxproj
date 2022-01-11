@@ -17,6 +17,7 @@
 		E08CD580278CF19C00E905A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E08CD57F278CF19C00E905A8 /* GoogleService-Info.plist */; };
 		E093EECF278D236900B6B89A /* ListaBrinquedosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E093EECE278D236900B6B89A /* ListaBrinquedosViewController.swift */; };
 		E0A5576F278DC456008626E7 /* Toy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5576E278DC456008626E7 /* Toy.swift */; };
+		E0A55771278DE55E008626E7 /* CadastraEditaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A55770278DE55E008626E7 /* CadastraEditaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E08CD57F278CF19C00E905A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E093EECE278D236900B6B89A /* ListaBrinquedosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaBrinquedosViewController.swift; sourceTree = "<group>"; };
 		E0A5576E278DC456008626E7 /* Toy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toy.swift; sourceTree = "<group>"; };
+		E0A55770278DE55E008626E7 /* CadastraEditaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastraEditaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				E08CD576278CF08B00E905A8 /* LaunchScreen.storyboard */,
 				E08CD579278CF08B00E905A8 /* Info.plist */,
 				E0A5576E278DC456008626E7 /* Toy.swift */,
+				E0A55770278DE55E008626E7 /* CadastraEditaViewController.swift */,
 			);
 			path = DoaBrinquedos;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0A5576F278DC456008626E7 /* Toy.swift in Sources */,
+				E0A55771278DE55E008626E7 /* CadastraEditaViewController.swift in Sources */,
 				E08CD570278CF08600E905A8 /* LoginViewController.swift in Sources */,
 				E08CD56C278CF08600E905A8 /* AppDelegate.swift in Sources */,
 				E093EECF278D236900B6B89A /* ListaBrinquedosViewController.swift in Sources */,

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -82,18 +83,21 @@
                             <constraint firstItem="1Ug-6w-fBm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="w9B-uY-fE8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Doar Brinquedos" largeTitleDisplayMode="always" id="E97-p2-BR5"/>
+                    <navigationItem key="navigationItem" title="Doar Brinquedos" largeTitleDisplayMode="always" id="E97-p2-BR5">
+                        <barButtonItem key="backBarButtonItem" title="Login" id="uwm-Wo-q7i"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="textFieldEmail" destination="9Yg-WY-SSo" id="bz0-Y3-0tg"/>
                         <outlet property="textFieldName" destination="jza-tJ-LWe" id="eF4-fh-ZQL"/>
                         <outlet property="textFieldPassword" destination="GSc-t4-I6N" id="djs-lU-mQk"/>
+                        <segue destination="l0J-0F-x7t" kind="show" identifier="gotoListaBrinquedos" id="ELi-tY-g5u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1023.75" y="81.25"/>
         </scene>
-        <!--Lista Brinquedos View Controller-->
+        <!--Lista de Brinquedos-->
         <scene sceneID="xYq-TF-MnV">
             <objects>
                 <viewController storyboardIdentifier="ListaBrinquedosViewController" id="l0J-0F-x7t" customClass="ListaBrinquedosViewController" customModule="DoaBrinquedos" customModuleProvider="target" sceneMemberID="viewController">
@@ -101,22 +105,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ney-US-oxH">
-                                <rect key="frame" x="0.0" y="52" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Lista de Brinquedos" largeTitleDisplayMode="always" id="y1R-x2-MUK">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="9Q9-rg-qoK"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem vindo," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7y-QS-9Mb">
-                                <rect key="frame" x="8" y="100" width="398" height="30"/>
+                                <rect key="frame" x="8" y="148" width="348" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="miB-RQ-7Ny">
-                                <rect key="frame" x="8" y="138" width="398" height="716"/>
+                                <rect key="frame" x="8" y="186" width="398" height="668"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="sMG-77-7QW" detailTextLabel="qES-Ta-GfV" style="IBUITableViewCellStyleValue1" id="WsE-5g-Uyl">
@@ -145,31 +141,116 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDB-hS-poT">
+                                <rect key="frame" x="360" y="148" width="62" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addAction:" destination="l0J-0F-x7t" eventType="touchUpInside" id="nst-df-441"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="euZ-C2-oVx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Ney-US-oxH" firstAttribute="trailing" secondItem="euZ-C2-oVx" secondAttribute="trailing" id="30t-Ny-KnX"/>
-                            <constraint firstItem="Ney-US-oxH" firstAttribute="leading" secondItem="euZ-C2-oVx" secondAttribute="leading" id="Nxt-Us-6Ex"/>
+                            <constraint firstItem="G7y-QS-9Mb" firstAttribute="top" secondItem="euZ-C2-oVx" secondAttribute="top" constant="8" id="Ndl-xZ-5Mr"/>
+                            <constraint firstItem="MDB-hS-poT" firstAttribute="leading" secondItem="G7y-QS-9Mb" secondAttribute="trailing" constant="4" id="Rsc-AS-BnK"/>
+                            <constraint firstItem="MDB-hS-poT" firstAttribute="trailing" secondItem="euZ-C2-oVx" secondAttribute="trailing" constant="8" id="U2Y-09-jdF"/>
+                            <constraint firstItem="MDB-hS-poT" firstAttribute="height" secondItem="G7y-QS-9Mb" secondAttribute="height" multiplier="1.03333" id="bJi-PA-idF"/>
                             <constraint firstItem="G7y-QS-9Mb" firstAttribute="leading" secondItem="euZ-C2-oVx" secondAttribute="leading" constant="8" id="dTo-o2-z2y"/>
                             <constraint firstItem="euZ-C2-oVx" firstAttribute="bottom" secondItem="miB-RQ-7Ny" secondAttribute="bottom" constant="8" id="e3Q-ZN-zjU"/>
                             <constraint firstItem="euZ-C2-oVx" firstAttribute="trailing" secondItem="miB-RQ-7Ny" secondAttribute="trailing" constant="8" id="ft3-Wr-rhw"/>
-                            <constraint firstItem="G7y-QS-9Mb" firstAttribute="top" secondItem="Ney-US-oxH" secondAttribute="bottom" constant="4" id="iEL-bA-xZi"/>
-                            <constraint firstItem="Ney-US-oxH" firstAttribute="top" secondItem="euZ-C2-oVx" secondAttribute="top" constant="8" id="j1r-3V-Vhh"/>
                             <constraint firstItem="miB-RQ-7Ny" firstAttribute="leading" secondItem="euZ-C2-oVx" secondAttribute="leading" constant="8" id="n9x-97-Hzs"/>
-                            <constraint firstAttribute="trailing" secondItem="G7y-QS-9Mb" secondAttribute="trailing" constant="8" id="u2O-AN-DyJ"/>
+                            <constraint firstItem="MDB-hS-poT" firstAttribute="top" secondItem="G7y-QS-9Mb" secondAttribute="top" id="pI0-iT-rVL"/>
+                            <constraint firstItem="MDB-hS-poT" firstAttribute="width" secondItem="euZ-C2-oVx" secondAttribute="width" multiplier="0.15" id="pUD-ca-Tpp"/>
                             <constraint firstItem="miB-RQ-7Ny" firstAttribute="top" secondItem="G7y-QS-9Mb" secondAttribute="bottom" constant="8" id="vhY-Gc-Y5Q"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Lista de Brinquedos" id="qVu-QN-eYa">
+                        <barButtonItem key="backBarButtonItem" title="Listar Brinquedos" id="9Zx-op-D3K"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="buttonAdd" destination="9Q9-rg-qoK" id="yeV-ge-6MM"/>
                         <outlet property="labelUserName" destination="G7y-QS-9Mb" id="cCp-Hz-oVQ"/>
                         <outlet property="tableViewBrinquedos" destination="miB-RQ-7Ny" id="ZKr-gk-ehi"/>
+                        <segue destination="1he-Fz-mcu" kind="show" identifier="gotoEdit" id="ToN-PB-lnp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWP-ky-hW2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1815.9420289855075" y="80.357142857142847"/>
+        </scene>
+        <!--Cadastrar Brinquedo-->
+        <scene sceneID="Yvj-yh-doL">
+            <objects>
+                <viewController id="1he-Fz-mcu" customClass="CadastraEditaViewController" customModule="DoaBrinquedos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CrU-dM-a1V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="nbB-0I-pM9">
+                                <rect key="frame" x="40" y="271" width="334" height="354"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wrh-PV-G7M">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado: 0-Novo, 1-Usado, 2-Precisa de Reparo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4pc-5z-UFD">
+                                        <rect key="frame" x="0.0" y="64" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Doador:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zvx-vw-iaI">
+                                        <rect key="frame" x="0.0" y="128" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Endereço:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fpr-Vg-FTI">
+                                        <rect key="frame" x="0.0" y="192" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGO-kG-Z1y">
+                                        <rect key="frame" x="0.0" y="256" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqm-aA-Zmk">
+                                        <rect key="frame" x="0.0" y="320" width="334" height="34"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Salvar"/>
+                                        <connections>
+                                            <action selector="saveAction:" destination="1he-Fz-mcu" eventType="touchUpInside" id="n6J-z4-U4M"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ODB-dD-Mbj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nbB-0I-pM9" firstAttribute="centerX" secondItem="CrU-dM-a1V" secondAttribute="centerX" id="20s-6F-x0J"/>
+                            <constraint firstItem="ODB-dD-Mbj" firstAttribute="trailing" secondItem="nbB-0I-pM9" secondAttribute="trailing" constant="40" id="6cN-Xd-abp"/>
+                            <constraint firstItem="nbB-0I-pM9" firstAttribute="centerY" secondItem="CrU-dM-a1V" secondAttribute="centerY" id="qsi-g2-a0E"/>
+                            <constraint firstItem="nbB-0I-pM9" firstAttribute="leading" secondItem="ODB-dD-Mbj" secondAttribute="leading" constant="40" id="uk0-dh-bFl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cadastrar Brinquedo" id="H4w-jv-FMe"/>
+                    <connections>
+                        <outlet property="textFieldAddress" destination="Fpr-Vg-FTI" id="V4j-gy-T4A"/>
+                        <outlet property="textFieldDonor" destination="Zvx-vw-iaI" id="KzB-EU-meh"/>
+                        <outlet property="textFieldName" destination="Wrh-PV-G7M" id="KRY-b8-W6O"/>
+                        <outlet property="textFieldPhone" destination="aGO-kG-Z1y" id="cwU-BR-274"/>
+                        <outlet property="textFieldState" destination="4pc-5z-UFD" id="Gaa-XM-VPm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKd-af-pqY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2601" y="80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ES9-Vi-7kD">
@@ -191,6 +272,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
