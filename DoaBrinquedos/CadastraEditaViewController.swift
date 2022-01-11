@@ -14,7 +14,7 @@ class CadastraEditaViewController: UIViewController {
     let collection = "toy"
 
     @IBOutlet weak var textFieldName: UITextField!
-    @IBOutlet weak var textFieldState: UITextField!
+    @IBOutlet weak var segmentedControlState: UISegmentedControl!
     @IBOutlet weak var textFieldDonor: UITextField!
     @IBOutlet weak var textFieldAddress: UITextField!
     @IBOutlet weak var textFieldPhone: UITextField!
@@ -44,14 +44,13 @@ class CadastraEditaViewController: UIViewController {
     @IBAction func saveAction(_ sender: Any) {
         guard let name = textFieldName.text else {return}
         
-        guard let stateString = textFieldState.text,
-              let state = Int(stateString) else {return}
-        
         guard let donor = textFieldDonor.text else {return}
         
         guard let address = textFieldAddress.text else {return}
         
         guard let phone = textFieldPhone.text else {return}
+        
+        let state = segmentedControlState.selectedSegmentIndex
         
         let data : [String: Any] = [
             "name": name,
@@ -60,8 +59,6 @@ class CadastraEditaViewController: UIViewController {
             "address": address,
             "phone": phone
         ]
-        
-        print("Botao salvar pressionado")
         
         if let toy = toy {
             //edicao
@@ -76,8 +73,10 @@ class CadastraEditaViewController: UIViewController {
     }
     
     private func showDialog(with message: String){
-        let alert = UIAlertController(title: "Carangas APP", message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let alert = UIAlertController(title: "Doe Brinquedos APP", message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.navigationController?.popViewController(animated: true)
+        }
         
         alert.addAction(alertAction)
         
@@ -88,19 +87,7 @@ class CadastraEditaViewController: UIViewController {
         textFieldName.text = toy.name
         textFieldDonor.text = toy.donor
         textFieldPhone.text = toy.phone
-        textFieldState.text = getStateName(state: toy.state)
         textFieldAddress.text = toy.address
+        segmentedControlState.selectedSegmentIndex = toy.state
     }
-
-    private func getStateName(state: Int) -> String {
-        switch state {
-        case 0:
-            return "Novo"
-        case 1:
-            return "Usado"
-        default:
-            return "Precisa de Reparo"
-        }
-    }
-    
 }
