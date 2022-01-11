@@ -191,4 +191,11 @@ extension ListaBrinquedosViewController : UITableViewDelegate {
 //        showAlertForToy(toys[indexPath.row])
         performSegue(withIdentifier: "gotoEdit", sender: toys[indexPath.row])
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let toy = toys[indexPath.row]
+            firestore.collection(collection).document(toy.id).delete()
+        }
+    }
 }
