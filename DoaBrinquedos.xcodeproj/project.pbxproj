@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBFF0339DFA21B0B79763601 /* Pods_DoaBrinquedos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1012B250398334EF65E433 /* Pods_DoaBrinquedos.framework */; };
+		E08CD56C278CF08600E905A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08CD56B278CF08600E905A8 /* AppDelegate.swift */; };
+		E08CD56E278CF08600E905A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08CD56D278CF08600E905A8 /* SceneDelegate.swift */; };
+		E08CD570278CF08600E905A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08CD56F278CF08600E905A8 /* LoginViewController.swift */; };
+		E08CD573278CF08600E905A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08CD571278CF08600E905A8 /* Main.storyboard */; };
+		E08CD575278CF08B00E905A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E08CD574278CF08B00E905A8 /* Assets.xcassets */; };
+		E08CD578278CF08B00E905A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08CD576278CF08B00E905A8 /* LaunchScreen.storyboard */; };
+		E08CD580278CF19C00E905A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E08CD57F278CF19C00E905A8 /* GoogleService-Info.plist */; };
+		E093EECF278D236900B6B89A /* ListaBrinquedosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E093EECE278D236900B6B89A /* ListaBrinquedosViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04A80C632CB68C8108916AC1 /* Pods-DoaBrinquedos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoaBrinquedos.debug.xcconfig"; path = "Target Support Files/Pods-DoaBrinquedos/Pods-DoaBrinquedos.debug.xcconfig"; sourceTree = "<group>"; };
+		2F1012B250398334EF65E433 /* Pods_DoaBrinquedos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoaBrinquedos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		893890D6943429351E77AD86 /* Pods-DoaBrinquedos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoaBrinquedos.release.xcconfig"; path = "Target Support Files/Pods-DoaBrinquedos/Pods-DoaBrinquedos.release.xcconfig"; sourceTree = "<group>"; };
+		E08CD568278CF08600E905A8 /* DoaBrinquedos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoaBrinquedos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E08CD56B278CF08600E905A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E08CD56D278CF08600E905A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E08CD56F278CF08600E905A8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E08CD572278CF08600E905A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E08CD574278CF08B00E905A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E08CD577278CF08B00E905A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E08CD579278CF08B00E905A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E08CD57F278CF19C00E905A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E093EECE278D236900B6B89A /* ListaBrinquedosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaBrinquedosViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E08CD565278CF08600E905A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBFF0339DFA21B0B79763601 /* Pods_DoaBrinquedos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CE7FD9D1998F788CF9BB6F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04A80C632CB68C8108916AC1 /* Pods-DoaBrinquedos.debug.xcconfig */,
+				893890D6943429351E77AD86 /* Pods-DoaBrinquedos.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7A03F99D430A6BB722B12C59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F1012B250398334EF65E433 /* Pods_DoaBrinquedos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E08CD55F278CF08600E905A8 = {
+			isa = PBXGroup;
+			children = (
+				E08CD56A278CF08600E905A8 /* DoaBrinquedos */,
+				E08CD569278CF08600E905A8 /* Products */,
+				3CE7FD9D1998F788CF9BB6F2 /* Pods */,
+				7A03F99D430A6BB722B12C59 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E08CD569278CF08600E905A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E08CD568278CF08600E905A8 /* DoaBrinquedos.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E08CD56A278CF08600E905A8 /* DoaBrinquedos */ = {
+			isa = PBXGroup;
+			children = (
+				E08CD57F278CF19C00E905A8 /* GoogleService-Info.plist */,
+				E08CD56B278CF08600E905A8 /* AppDelegate.swift */,
+				E08CD56D278CF08600E905A8 /* SceneDelegate.swift */,
+				E08CD56F278CF08600E905A8 /* LoginViewController.swift */,
+				E093EECE278D236900B6B89A /* ListaBrinquedosViewController.swift */,
+				E08CD571278CF08600E905A8 /* Main.storyboard */,
+				E08CD574278CF08B00E905A8 /* Assets.xcassets */,
+				E08CD576278CF08B00E905A8 /* LaunchScreen.storyboard */,
+				E08CD579278CF08B00E905A8 /* Info.plist */,
+			);
+			path = DoaBrinquedos;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E08CD567278CF08600E905A8 /* DoaBrinquedos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E08CD57C278CF08B00E905A8 /* Build configuration list for PBXNativeTarget "DoaBrinquedos" */;
+			buildPhases = (
+				29B91DE75DF25709B5B6B2BD /* [CP] Check Pods Manifest.lock */,
+				E08CD564278CF08600E905A8 /* Sources */,
+				E08CD565278CF08600E905A8 /* Frameworks */,
+				E08CD566278CF08600E905A8 /* Resources */,
+				7361825CD33C6BB54DB18B96 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DoaBrinquedos;
+			productName = DoaBrinquedos;
+			productReference = E08CD568278CF08600E905A8 /* DoaBrinquedos.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E08CD560278CF08600E905A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					E08CD567278CF08600E905A8 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = E08CD563278CF08600E905A8 /* Build configuration list for PBXProject "DoaBrinquedos" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E08CD55F278CF08600E905A8;
+			productRefGroup = E08CD569278CF08600E905A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E08CD567278CF08600E905A8 /* DoaBrinquedos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E08CD566278CF08600E905A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E08CD578278CF08B00E905A8 /* LaunchScreen.storyboard in Resources */,
+				E08CD580278CF19C00E905A8 /* GoogleService-Info.plist in Resources */,
+				E08CD575278CF08B00E905A8 /* Assets.xcassets in Resources */,
+				E08CD573278CF08600E905A8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29B91DE75DF25709B5B6B2BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoaBrinquedos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7361825CD33C6BB54DB18B96 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoaBrinquedos/Pods-DoaBrinquedos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoaBrinquedos/Pods-DoaBrinquedos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DoaBrinquedos/Pods-DoaBrinquedos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E08CD564278CF08600E905A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E08CD570278CF08600E905A8 /* LoginViewController.swift in Sources */,
+				E08CD56C278CF08600E905A8 /* AppDelegate.swift in Sources */,
+				E093EECF278D236900B6B89A /* ListaBrinquedosViewController.swift in Sources */,
+				E08CD56E278CF08600E905A8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E08CD571278CF08600E905A8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E08CD572278CF08600E905A8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E08CD576278CF08B00E905A8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E08CD577278CF08B00E905A8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E08CD57A278CF08B00E905A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E08CD57B278CF08B00E905A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E08CD57D278CF08B00E905A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04A80C632CB68C8108916AC1 /* Pods-DoaBrinquedos.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DoaBrinquedos/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.edu.unyleya.henry.miller.DoaBrinquedos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E08CD57E278CF08B00E905A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 893890D6943429351E77AD86 /* Pods-DoaBrinquedos.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DoaBrinquedos/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.edu.unyleya.henry.miller.DoaBrinquedos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E08CD563278CF08600E905A8 /* Build configuration list for PBXProject "DoaBrinquedos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E08CD57A278CF08B00E905A8 /* Debug */,
+				E08CD57B278CF08B00E905A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E08CD57C278CF08B00E905A8 /* Build configuration list for PBXNativeTarget "DoaBrinquedos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E08CD57D278CF08B00E905A8 /* Debug */,
+				E08CD57E278CF08B00E905A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E08CD560278CF08600E905A8 /* Project object */;
+}
